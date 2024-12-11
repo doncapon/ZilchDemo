@@ -1,0 +1,31 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Automation Test Suite" parallel="false">
+    <listeners>
+        <listener class-name = "org.zilch.com.base.SuiteListener">
+        </listener>
+    </listeners>
+    <!-- Web Test Suite -->
+    <test name="Web Test Suite">
+        <parameter name="testType" value="web" />
+        <classes>
+            <class name="org.zilch.com.web.tests.SuperSixSimulation" />
+        </classes>
+    </test>
+
+<!--    &lt;!&ndash; API Test Suite &ndash;&gt;-->
+<!--    <test name="API Test Suite">-->
+<!--        <parameter name="testType" value="api" />-->
+<!--        <classes>-->
+<!--            <class name="org.zilch.com.api.tests.IdmbAPITests" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    &lt;!&ndash; Mobile Test Suite &ndash;&gt;-->
+<!--    <test name="Mobile Test Suite">-->
+<!--        <parameter name="testType" value="mobile" />-->
+<!--        <classes>-->
+<!--            <class name="org.zilch.com.mobile.tests.PayZilchTests" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+</suite>
