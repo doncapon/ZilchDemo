@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "properties": {
+    "page": { "type": "integer" },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "title": { "type": "string" },
+          "release_date": { "type": "string" },
+          "overview": { "type": "string" }
+        },
+        "required": ["id", "title", "release_date", "overview"]
+      }
+    },
+    "total_results": { "type": "integer" },
+    "total_pages": { "type": "integer" }
+  },
+  "required": ["page", "results", "total_results", "total_pages"]
+}
