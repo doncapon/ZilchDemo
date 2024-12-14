@@ -49,6 +49,7 @@ public class AppiumHelper {
                     caps.setCapability("udid", configManager.getConfigProperty("DEVICE_UDID"));
                 } else {
                     // Emulator-specific capabilities
+                    caps.setCapability("avdLaunchTimeout", configManager.getConfigProperty("AVD_LAUNCH_TIMEOUT"));
                     String appExtension = configManager.getConfigProperty("PLATFORM_NAME").equalsIgnoreCase("Android") ? ".apk" : ".ipa";
                     caps.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + File.separator + "apps" + File.separator
                             +configManager.getConfigProperty("PLATFORM_NAME").toLowerCase()+ File.separator+
